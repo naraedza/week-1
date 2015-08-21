@@ -10,12 +10,19 @@ namespace Lab1_2
     {
         static void Main(string[] args)
         {
+            input();
+        }
+        static public void input()
+        {
+            Console.Write("Input the numbers: ");
+            string number = Console.ReadLine();
+            process(number);
+        }
+        static public void process(string number)
+        {
             bool flag = true;
+            int[] input = number.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
 
-            // input
-            int[] input = { 4, 5, 2, 8, 9, 1, 2, 4, 3, 1 };
-
-            // process
             while (flag)
             {
                 flag = false;
@@ -30,8 +37,10 @@ namespace Lab1_2
                     }
                 }
             }
-
-            // output
+            output(input);
+        }
+        static public void output(int[] input)
+        {
             for (int i = 0; i != input.Length; i++)
             {
                 Console.Write(input[i]);
