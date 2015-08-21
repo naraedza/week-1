@@ -6,7 +6,7 @@
 # Questions
 * Why we need "if-else" in function process?
 
-Answer:
+Answer: if we didn't have "if-else" when we input "0" the answer will be incorrect.
 
 
 # Resources
