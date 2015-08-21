@@ -14,13 +14,15 @@ namespace Lab1_2
         }
         static public void input()
         {
-            int[] input = { 4, 5, 2, 8, 9, 1, 2, 4, 3, 1 };
-            process(input);
+            Console.Write("Input the numbers: ");
+            string number = Console.ReadLine();
+            process(number);
         }
-        static public void process(int[] input)
+        static public void process(string number)
         {
             bool flag = true;
-            
+            int[] input = number.Split(' ').Select(n => Convert.ToInt32(n)).ToArray();
+
             while (flag)
             {
                 flag = false;
